@@ -19,12 +19,12 @@ export default function AddLeaves() {
     event.preventDefault();
 
     try {
-      await fetch("/api/add-manager/route", {
-        method: "GET",
+      await fetch("api/add-manager", {
+        method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        //body: JSON.stringify({ managerid, firstname }),
+        body: JSON.stringify({ managerid, firstname }),
       });
 
       // Navigate to a different page or update state
